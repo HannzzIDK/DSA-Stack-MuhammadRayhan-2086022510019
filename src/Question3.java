@@ -61,7 +61,6 @@ class solution {
       while (!stack.isEmpty()) {
          result += stack.pop();
       }
-
       return result;
    }
 }

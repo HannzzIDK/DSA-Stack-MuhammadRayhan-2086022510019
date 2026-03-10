@@ -30,11 +30,8 @@ class testcase {// testcase class
     public static void main(String[] args) {
 
         Question1 q1 = new Question1();
-        System.out.println(q1.isBalanced("()[]{}"));
-        System.out.println(q1.isBalanced("(]"));
-        System.out.println(q1.isBalanced("([)]"));
-        System.out.println(q1.isBalanced("{[]}"));
-        System.out.println(q1.isBalanced("{{{[[[}}}(())}}{{{(()))}}}"));
-
+        System.out.println(q1.isBalanced("{[()]}")); // sample case
+        System.out.println(q1.isBalanced("([)]")); // custom case 1
+        System.out.println(q1.isBalanced("{[]}")); // custom case 2
     }
 }

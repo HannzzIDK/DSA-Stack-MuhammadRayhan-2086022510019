@@ -1,6 +1,5 @@
 import java.util.Stack;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Question4 {
     public static void main(String[] args) {
@@ -9,17 +8,17 @@ public class Question4 {
         String[] tokens = str.split(" ");
 
         Stack<Integer> stack = new Stack<>();
-        ArrayList<Integer> tempArray = new ArrayList<>();
+        int[] tempArray = new int[tokens.length];
         for (String token : tokens) {
             int num = Integer.parseInt(token);
+            int tempSize = 0;
             while (!stack.isEmpty() && stack.peek() < num) {
-                tempArray.add(stack.pop());
+                tempArray[tempSize++] = stack.pop();
             }
             stack.push(num);
-            for (int i = tempArray.size() - 1; i >= 0; i--) {
-                stack.push(tempArray.get(i));
+            for (int i = tempSize - 1; i >= 0; i--) {
+                stack.push(tempArray[i]);
             }
-            tempArray.clear();
         }
         String result = "";
         while (!stack.isEmpty()) {

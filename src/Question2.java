@@ -36,9 +36,9 @@ class testcase2 {
 public class Question2 { // idea from myself, code implementation from youtube
     public static void main(String[] args) {
         testcase2 t = new testcase2();
-        System.out.println(t.solution("12+3*"));
-        System.out.println(t.solution("12+3*45+6/7-"));
-        System.out.println(t.solution("12+3*45+6/7-8*"));
-        System.out.println(t.solution("12+3*45+6/7-8*9/"));
+        System.out.println(t.solution("21+3*"));// sample case
+        System.out.println(t.solution("12+3*45+6/7-"));// custom case 1
+        System.out.println(t.solution("12+3*45+6/7-8*"));// custom case 2
+        System.out.println(t.solution("123*45+6/7-8*"));// custom case 3
     }
 }
